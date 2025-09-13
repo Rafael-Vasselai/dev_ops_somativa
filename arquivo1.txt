@@ -1,1 +1,3 @@
 Primeira linha do arquivo1
+
+Linha adicional no arquivo1 para commit 5
