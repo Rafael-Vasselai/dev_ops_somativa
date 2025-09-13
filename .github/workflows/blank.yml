@@ -1,0 +1,23 @@
+name: CI-CD Pipeline
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run tests
+        run: echo "Rodando testes (CI simulada com sucesso ✅)"
+
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy step
+        run: echo "Fazendo deploy simulado (CD com sucesso 🚀)"
